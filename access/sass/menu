@@ -1,0 +1,32 @@
+
+/*
+#btn-mobile{
+            padding: 1.5rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+
+            display: flex!important;
+            gap: .5rem;
+            font-size: 1rem;
+            color: #fff;
+
+            .hamburguer{
+               width: 25px;
+               border-top: 2px solid $primaryRed;
+           }
+
+           .hamburguer::after, .hamburguer::before{
+               content: '';
+               width: 25px;
+               height: 2px;
+               display: block;
+               margin-top: 7px;
+               background-color: $primaryRed;
+            }
+
+            .hamburguer .active{
+               border-top-color: transparent;
+            }
+
+         }

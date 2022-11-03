@@ -1,0 +1,173 @@
+@import '_colors.scss';
+
+@media (max-width: 800px){
+
+   body{
+      header{
+         #menu{
+            ul{
+               flex-direction: column;
+               align-items: center;
+               width: 50%;
+               height: 90vh;
+
+               position: absolute;
+               top: 10vh;
+               right: -51%;
+
+               background-color: $black;
+               z-index: 99;
+            }
+
+            #btn-mobile{
+               display: flex!important;
+
+               .hamburguer{
+                  width: 25px;
+                  border-top: 2px solid $primaryRed;
+               }
+
+               .hamburguer::after, .hamburguer::before{
+                  content: '';
+                  width: 25px;
+                  height: 2px;
+                  display: block;
+                  margin-top: 7px;
+                  background-color: $primaryRed;
+                  transition: .3s ease;
+                  position: relative;
+               }
+            }
+         }
+
+         #menu.active{
+            #btn-mobile{
+              
+               .hamburguer{
+                  border-top-color: transparent;
+               }
+               .hamburguer::after{
+                  transform: rotate(135deg);
+                  top: -8px;
+               }
+               .hamburguer::before{
+                  transform: rotate(-135deg);
+               }
+               
+            }
+
+            ul{
+               right: 0;
+            }
+         }
+      }
+
+      .welcome{
+         width: 90%;
+         .img{ 
+            align-items: center;
+            img{width: 100%;}
+         }
+      }
+
+      .about-me{
+         grid-template-columns: 45% 1fr;
+
+         .itens{
+            p{font-size: 1.2rem;}
+         }
+
+         .img{
+            .figma{@include fly-left(8%, 17%, -8%)}
+            .photoshop{@include fly-left(11%, 33%, 10%)}
+            .sai{@include fly-left(10%, 35%, -2%)}
+            .illustrator{@include fly-left(10%, 12%, 4%)}
+         }
+      }
+
+      .projects{
+         width: 90%;
+         .project{width: 300px;}
+      }
+
+      footer{
+         .container{img{width: 5.25vw;}}
+      }
+   } 
+}
+
+@media (max-width: 500px){
+   body{
+
+      header{
+         .logo{
+            font-size: 1.2rem;
+            font-weight: 500;
+         }
+         #menu{
+            ul{
+               margin-top: 10%;
+               width: 100%;
+               right: -101%;
+               gap: 15vw;
+            }
+         }
+      }
+
+      .welcome{
+         width: 95%;
+         flex-direction: column-reverse;
+
+         div{
+            width: 100%;
+            text-align: center;
+         }
+
+         .img{
+            align-items: center;
+            justify-content: center;
+            img{width: 60%;}
+         }
+      }
+
+      .skills{
+         .skill{
+            width: 200px;
+            height: 100px;
+         }
+      }
+
+      .about-me{
+         text-align: center;
+
+         .itens{
+            grid-column: 1/3;
+            grid-row: 2/3;
+         }
+
+         .img{
+            grid-column: 1/3;
+            width: 85%;
+            margin: 0 auto;
+
+            .figma{@include fly-left(8%, 17%, 0%)}
+            .photoshop{@include fly-left(11%, 33%, 19%)}
+            .sai{@include fly-left(10%, 35%, 4%)}
+            .illustrator{@include fly-left(10%, 12%, 10%)}
+            
+         }
+      }
+
+      footer{
+         .container{
+
+            flex-direction: column;
+            align-items: center;
+
+            h2{font-size: 1rem;}
+
+            img{ width: 10vw;}
+         }
+      }
+   }
+}
