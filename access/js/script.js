@@ -1,22 +1,17 @@
 //      MENU    //  
 let btnMobile = document.querySelector('#btn-mobile');
 let menu = document.querySelector('#menu');
-
 let linksMenu = document.querySelectorAll('#menu ul li a');
-
-
-console.log(linksMenu);
 
 function menuFunction(){
     menu.classList.toggle('active');
 }
 
-function closeMenu(){
-    menu.classList.remove('active');
-}
-
 btnMobile.addEventListener('click', menuFunction);
-//linksMenu.addEventListener('click', closeMenu);
+
+linksMenu.forEach(link =>{
+    link.addEventListener('click', menuFunction)
+})
 
 //      SCROLL REVEAL   //
 

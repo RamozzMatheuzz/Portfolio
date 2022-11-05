@@ -102,6 +102,10 @@ body header #menu ul li:hover {
   background-size: 100% 100%;
   background-position-x: left;
 }
+body header #menu ul li a {
+  display: block;
+  padding: 0.3rem;
+}
 body .welcome {
   visibility: hidden;
   box-sizing: border-box;
@@ -371,18 +375,18 @@ body footer .container > div .itens {
 
 @media (max-width: 800px) {
   body header #menu ul {
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 50%;
-    height: 90vh;
+    height: 91vh;
     position: absolute;
     top: 10vh;
-    right: -51%;
     background-color: #0C0C0E;
     z-index: 99;
   }
   body header #menu #btn-mobile {
-    display: flex !important;
+    display: flex;
   }
   body header #menu #btn-mobile .hamburguer {
     width: 25px;
@@ -409,6 +413,7 @@ body footer .container > div .itens {
     transform: rotate(-135deg);
   }
   body header #menu.active ul {
+    display: flex;
     right: 0;
   }
   body .welcome {
@@ -470,6 +475,7 @@ body footer .container > div .itens {
     width: 100%;
     right: -101%;
     gap: 15vw;
+    top: 4vh;
   }
   body .welcome {
     width: 95%;
