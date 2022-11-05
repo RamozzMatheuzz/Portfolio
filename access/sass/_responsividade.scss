@@ -92,7 +92,9 @@
       }
 
       footer{
-         .container{img{width: 5.25vw;}}
+         .container{
+            img{width: 5.25vw;}
+         }
       }
    } 
 }
@@ -165,7 +167,7 @@
             flex-direction: column;
             align-items: center;
 
-            h2{font-size: 1rem;}
+            h2{font-size: .9rem;}
 
             img{ width: 10vw;}
          }
